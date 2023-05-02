@@ -1,0 +1,206 @@
+.slider {
+	position: relative;
+	padding: 40px 24px 52px 24px;
+	
+	&__slide {
+		height: 516px;
+		border: 1px solid $border-color;
+		border-radius: 30px;
+		border-bottom-left-radius: 0px;
+	}
+
+	&__droplet {
+		background-image: url(../images/banner_droplet_bg.png);
+		background-repeat: no-repeat;
+		&_logo {
+			position: absolute;
+			right: 55px;
+			bottom: 131px;
+		}
+	}
+
+	&__description {
+		padding: 53px 56px;
+		color: $first-color;
+		text-transform: uppercase;
+
+		&_subtitle {
+			margin-bottom: 8px;
+
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			color: #ffffff80;
+		}
+
+		&_title {
+			margin: 0 0 24px 0;
+			font-family: 'FavoritLight';
+			font-weight: 350;
+			font-size: 56px;
+			letter-spacing: -0.02em;
+		}
+
+		&_text {
+			margin: 0 0 32px 0;
+			font-weight: 350;
+			font-family: 'FavoritLight';
+			font-size: 16px;
+			line-height: 64px;
+			letter-spacing: -0.02em;
+		}
+
+		&_button {
+			padding: 16px 32px;
+			border: 1px solid $first-color;
+			border-radius: 0px 20px 20px 32px;	
+
+			font-weight: 700;
+			font-family: 'FavoritBold';
+			font-size: 16px;
+			line-height: 20px;
+			color: $second-color;
+			text-transform: uppercase;
+			transition: .4s
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	.slider__nav {
+		position: absolute;
+    display: flex;
+    left: 50%;
+    right: 50%;
+		bottom: 46px;
+    transform: translate(0, -50%);
+    justify-content: center;
+    align-items: center;
+		
+		&_arrows {
+			position: absolute;
+			display: flex;
+    	justify-content: space-between;
+			padding: 6px 11px;
+
+			width: 162px;
+			height: 42px;
+
+			background: $second-color;
+			border: 0.5px solid $first-color;
+			border-radius: 30px;
+		}
+
+		&_right-arr {
+			transform: rotate(180deg);
+		}
+		&_right-arr,
+		&_left-arr {
+			transition: .4s
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&_button {
+			position: absolute;
+			display: flex;
+	    align-items: center;
+    	justify-content: center;
+
+			width: 64px;
+			height: 64px;
+
+			background: $second-color;
+			border-radius: 50%;
+			border: 0.5px solid $first-color;
+		}
+	}
+
+	&__vector {
+		position: absolute;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		right: 24px;
+		width: 371px;
+		padding: 18px 0;
+		
+		background: $second-color;
+		border-bottom: 1px solid $border-color;
+		border-left: 1px solid $border-color;
+		border-bottom-left-radius: 30px;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			box-shadow: 15px -15px 0px 10px $second-color;
+		}
+		
+		&::before {
+			border-right: 1px solid $border-color;
+			border-top: 1px solid $border-color;
+			border-top-right-radius: 30px;
+			top: 0px;
+			right: 100%;
+		}
+		&::after {
+			border-right: 1px solid $border-color;
+			border-top: 1px solid $border-color;
+			border-top-right-radius: 30px;
+			bottom: -31px;
+			right: 0;
+		}
+	}
+	&__player {
+		position: absolute;
+		display: flex;
+    align-items: flex-end;
+		justify-content: space-between;
+		right: 24px;
+		bottom: 52px;
+		width: 371px;
+		padding: 18px 86px 18px 46px;
+
+		background: $second-color;
+		border-top: 1px solid $border-color;
+		border-left: 1px solid $border-color;
+		border-top-left-radius: 30px;
+
+		&_discord {
+			transition: .4s
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			box-shadow: 16px 16px 0px 15px $second-color;
+		}
+
+		&::before {
+			border-right: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			border-bottom-right-radius: 30px;
+			top: 27px;
+			right: 100%;
+		}
+
+		&::after {
+			border-right: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			border-bottom-right-radius: 30px;
+			bottom: 58px;
+			right: 0px;
+		}
+	}
+}
+
